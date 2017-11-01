@@ -26,6 +26,8 @@ namespace Lab36Erik
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //adding the DbContext and pointing to our conection string.
             services.AddDbContext<GamesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 

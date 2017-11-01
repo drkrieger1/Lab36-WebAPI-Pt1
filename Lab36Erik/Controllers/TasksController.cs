@@ -10,14 +10,19 @@ namespace Lab36Erik.Controllers
     public class TasksController : ControllerBase
     {
         //Get
+        //this code uses binding to pass in an id
         [HttpGet("{id:int?}")] 
         public string Get(string id)
         {
-            return "Got this";
+            return $"Got this {id}";
         }
 
         //Post 
+        [HttpPost("{id:int?}")]
+        public void Post(string id)
+        {
 
+        }
         //Put 
 
         //Delete 
